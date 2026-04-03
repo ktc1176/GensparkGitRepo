@@ -35,5 +35,4 @@ pipeline {
                 echo 'Deploying to production...'
             }
         }
-    }
 }
