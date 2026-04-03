@@ -10,7 +10,9 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn compile'
+                dir('GitPracticeProject'){
+                    bat 'mvn compile'
+                }
             }
             post {
                 always {
@@ -21,7 +23,9 @@ pipeline {
 
         stage('Test') {
         steps {
-                bat 'mvn test'
+                dir('GitPracticeProject'){
+                    bat 'mvn test'
+                }
             }
             post {
                 always {
