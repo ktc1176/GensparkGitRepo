@@ -20,7 +20,7 @@ pipeline {
         }
 
         stage('Test') {
-        steps {}
+        steps {
                 bat 'mvn test'
             }
             post {
@@ -35,4 +35,5 @@ pipeline {
                 echo 'Deploying to production...'
             }
         }
+    }
 }
